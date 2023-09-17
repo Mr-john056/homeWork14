@@ -13,7 +13,7 @@ public class Main {
         new Kogtevran("Чжоу", "Чанг", "82", "88", "89", "85", "86");
         new Kogtevran("Падма", "Патил", "96", "84", "86", "84", "83");
         new Kogtevran("Маркус", "Белби", "89", "93", "86", "87", "88");
-        };
+};
         Griffindor hogwart = (Griffindor) hogwarts[0];
         Hogwarts hogwarts1 = hogwarts[1];
         hogwart.compare(hogwarts1);
@@ -26,6 +26,7 @@ public class Main {
         System.out.println("Сравнение учеников из одного факультета по параметрам факультета");
         System.out.println(hogwarts[0].compare(hogwarts[1]));
         System.out.println(hogwarts[3].compare(hogwarts[5]));
+        }
     }
 
 }

@@ -1,13 +1,13 @@
-public abstract class Griffindor extends Hogwarts {
+public class Griffindor extends Hogwarts {
     private int nobility;
     private int honor;
     private int bravery;
 
     public Griffindor(String name, String surname, String transgression, String powerMagic, String nobility, String honor, String bravery) {
         super(name, surname, transgression, powerMagic);
-        this.nobility = nobility;
-        this.honor = honor;
-        this.bravery = bravery;
+        this.nobility = Integer.parseInt(nobility);
+        this.honor = Integer.parseInt(honor);
+        this.bravery = Integer.parseInt(bravery);
     }
 
     public int getNobility() {
@@ -44,8 +44,8 @@ public abstract class Griffindor extends Hogwarts {
     }
 
     public String compare(Griffindor griffindor) {
-        return (nobility + honor + bravery) > (griffindor.getNobility() + griffindor.getHonor() + griffindor.getBravery() +
-                getName() + getSurname() + "лучший студент Гриффиндора" + " чем " + griffindor.getName() + griffindor.getSurname()) +
-                getName() + getSurname() + "худший студент Гриффиндора" + " чем" + griffindor.getName() + griffindor.getSurname();
+        return (nobility + honor + bravery) > (int) griffindor.getNobility() + griffindor.getHonor() + griffindor.getBravery() ?
+                getName() + getSurname() + "Обладает большей мощностью магии чем " + griffindor.getName() + griffindor.getSurname() :
+                getName() + getSurname() + "Обладает меньшей мощностью магии чем" + griffindor.getName() + griffindor.getSurname();
     }
 }

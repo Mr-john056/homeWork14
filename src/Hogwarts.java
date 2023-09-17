@@ -4,14 +4,13 @@ public class Hogwarts {
     private int transgression;
     private int powerMagic;
 
-    public Hogwarts(String name, String surname, int transgression, int powerMagic) {
+    public Hogwarts(String name, String surname, String transgression, String powerMagic) {
         this.name = name;
         this.surname = surname;
-        this.transgression = transgression;
-        this.powerMagic = powerMagic;
+        this.transgression = Integer.parseInt(transgression);
+        this.powerMagic = Integer.parseInt(powerMagic);
     }
 
-    @Override
     public String toString() {
         return "Основные свойства{" +
                 "Трансгрессия = " + transgression +
@@ -20,9 +19,9 @@ public class Hogwarts {
     }
 
     public String compare(Hogwarts hogwarts) {
-        return (powerMagic + transgression) > (hogwarts.getPowerMagic() + hogwarts.getTransgression()
-                + hogwarts.getName() + hogwarts.getSurname() + "Обладает большей мощностью магии чем ") + hogwarts.getName() + hogwarts.getSurname();
-        return getName() + getSurname() + "Обладает меньшей мощностью магии чем" + hogwarts.getName() + hogwarts.getSurname();
+        return (powerMagic + transgression) > (int) hogwarts.getPowerMagic() + hogwarts.getTransgression() ?
+                getName() + getSurname() + "Обладает большей мощностью магии чем " + hogwarts.getName() + hogwarts.getSurname() :
+                getName() + getSurname() + "Обладает меньшей мощностью магии чем" + hogwarts.getName() + hogwarts.getSurname();
     }
 
     public String getName() {
