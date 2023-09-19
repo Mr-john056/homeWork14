@@ -46,6 +46,6 @@ public class Griffindor extends Hogwarts {
     public String compare(Griffindor griffindor) {
         return (nobility + honor + bravery) > (int) griffindor.getNobility() + griffindor.getHonor() + griffindor.getBravery() ?
                 getName() + getSurname() + "Обладает большей мощностью магии чем " + griffindor.getName() + griffindor.getSurname() :
-                getName() + getSurname() + "Обладает меньшей мощностью магии чем" + griffindor.getName() + griffindor.getSurname();
+                getName() + getSurname() + " " + "Обладает меньшей мощностью магии чем" + griffindor.getName() + griffindor.getSurname();
     }
 }
